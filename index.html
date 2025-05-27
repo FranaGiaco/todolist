@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todo List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f5fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .todo-list {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(150, 100, 220, 0.25);
+      width: 320px;
+      text-align: center;
+    }
+    
+    .todo-list h2 {
+      color: #6a0dad; /* morado */
+      margin-bottom: 20px;
+    }
+    
+    .todo-button {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      margin: 8px 0;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    
+    .todo-button.purple {
+      background-color: #6a0dad;
+    }
+    
+    .todo-button.purple:hover {
+      background-color: #8a32c9;
+    }
+    
+    .todo-button.pink {
+      background-color: #ff66b2;
+    }
+    
+    .todo-button.pink:hover {
+      background-color: #ff4d9e;
+    }
+    
+    /* Puedes agregar más estilos para la lista, tareas completadas, etc. */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    li.completed span {
+      text-decoration: line-through;
+      color: gray;
+    }
+    button.task-btn {
+      margin-left: 8px;
+      padding: 5px 8px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    button.complete-btn {
+      background-color: #6a0dad;
+      color: white;
+    }
+    button.delete-btn {
+      background-color: #ff4d4d;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="todo-list">
+    <header>
+      <h1>Todo List</h1>
+    </header>
+
+    <section id="task-summary">
+      <h2>Resumen</h2>
+      <p>Total de tareas: <span id="total-tasks">0</span></p>
+      <p>Tareas completadas: <span id="completed-tasks">0</span></p>
+    </section>
+
+    <section id="task-form">
+      <h2>Agregar nueva tarea</h2>
+      <input type="text" id="task-input" placeholder="Descripción de la tarea" />
+      <button id="add-task-button" class="todo-button purple">Agregar Tarea</button>
+    </section>
+
+    <section id="task-list">
+      <h2>Lista de tareas</h2>
+      <ul id="tasks">
+        <li><span>Alimentar Gatos</span>
+          <div>
+            <button class="task-btn complete-btn">Marcar</button>
+            <button class="task-btn delete-btn">Eliminar</button>
+          </div>
+        </li>
+        <li><span>Hacer Ejercicio</span>
+          <div>
+            <button class="task-btn complete-btn">Marcar</button>
+            <button class="task-btn delete-btn">Eliminar</button>
+          </div>
+        </li>
+        <li class="completed"><span>Trabajar</span>
+          <div>
+            <button class="task-btn complete-btn">Marcar</button>
+            <button class="task-btn delete-btn">Eliminar</button>
+          </div>
+        </li>
+        <li><span>Aprender Inglés</span>
+          <div>
+            <button class="task-btn complete-btn">Marcar</button>
+            <button class="task-btn delete-btn">Eliminar</button>
+          </div>
+        </li>
+        <li><span>Estudiar programación</span>
+          <div>
+            <button class="task-btn complete-btn">Marcar</button>
+            <button class="task-btn delete-btn">Eliminar</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

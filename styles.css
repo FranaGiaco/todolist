@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f5fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .todo-list {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(150, 100, 220, 0.25);
+    width: 320px;
+    text-align: center;
+  }
+  
+  .todo-list h2 {
+    color: #6a0dad; /* morado */
+    margin-bottom: 20px;
+  }
+  
+  .todo-button {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .todo-button.purple {
+    background-color: #6a0dad;
+  }
+  
+  .todo-button.purple:hover {
+    background-color: #8a32c9;
+  }
+  
+  .todo-button.pink {
+    background-color: #ff66b2;
+  }
+  
+  .todo-button.pink:hover {
+    background-color: #ff4d9e;
+  }
+  
